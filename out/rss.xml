@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[My Website]]></title>
+        <description><![CDATA[My Website]]></description>
+        <link>http://localhost:9778</link>
+        <generator>RSS for Node</generator>
+        <lastBuildDate>Wed, 06 Aug 2014 21:35:01 GMT</lastBuildDate>
+        <atom:link href="http://localhost:9778/rss.xml" rel="self" type="application/rss+xml"/>
+        <pubDate>Wed, 06 Aug 2014 21:35:00 GMT</pubDate>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[<h1>Hi again</h1>]]></description>
+            <link>http://localhost:9778/index.html</link>
+            <guid isPermaLink="true">http://localhost:9778/index.html</guid>
+            <pubDate>Tue, 05 Aug 2014 23:19:17 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[The first post]]></title>
+            <description><![CDATA[<p>I&#39;ve been working on getting a static blog together since the 2012/2013, with the original idea being to<br />export my whole Blog using node which is something I did at [<a href='https://github.com/andyj/blogcfc2html'>https://github.com/andyj/blogcfc2html</a>]. Though the idea of importing 1000+ posts in to a shinny new blog along with issues like broken links to images and external resources never sat well with me. I then saw <a href="http://www.corfield.org/blog/post.cfm/the-blog-is-dead-long-live-the-blog">Sean&#39;s post</a> and figured I&#39;d steal the idea of leaving the old site as-is as an archive and move on.</p>
+
+<p>So here I am, now pushing static pages to Github via <a href="http://docpad.org/">docpad</a>. This will also be linked to my <a href="http://feeds.feedburner.com/andyjarrett">feedburner feed</a> if anyone still subscribes via RSS?</p>]]></description>
+            <link>http://localhost:9778/posts/first-post.html</link>
+            <guid isPermaLink="true">http://localhost:9778/posts/first-post.html</guid>
+            <pubDate>Mon, 04 Aug 2014 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[NPM not found when using NVM]]></title>
+            <description><![CDATA[<p>Had an issue with NPM not found with an install of Node.js via NVM. Tried <code>$ which npm</code> and that didn&#39;t return anything. As much as I like a puzzle sometimes its easier to start again.</p>
+
+<pre><code>$ rm -R ~/.npm
+$ rm -R ~/.nvm
+$ rm -R ~/.bower
+</code></pre>
+
+<p>Then head back to <a href="https://github.com/creationix/nvm">github.com/creationix/nvm</a> and install again.</p>
+
+<p>Don&#39;t forget to add <code>nvm alias default 0.10</code> to make sure NPM/Node is loading with each new terminal window.</p>]]></description>
+            <link>http://localhost:9778/posts/npm-not-found-with-nvm.html</link>
+            <guid isPermaLink="true">http://localhost:9778/posts/npm-not-found-with-nvm.html</guid>
+            <pubDate>Thu, 07 Aug 2014 00:00:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>
