@@ -5,5 +5,5 @@ node_modules/
 
 # Use wildcards as well
 *.log
-
+sribble.*
 # Can also ignore all directories and files in a directory.
