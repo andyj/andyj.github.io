@@ -18,10 +18,10 @@ docpadConfig = {
         livereload:
           enabled: true
 
-    staging: # change the name here if you have other environments
-      plugins:
-        livereload:
-          enabled: true
+    development:
+        templateData:
+            site:
+                url: 'http://andyj.github.io'
 
   collections:
       posts: ->
