@@ -9,14 +9,14 @@ docpadConfig = {
         collection: 'posts'
         url: '/rss.xml' # optional, this is the default
     ghpages:
-      deployRemote: 'docpad'
+      deployRemote: 'origin'
       deployBranch: 'master'
   # enabled example for different environments
   environments:
     development: # change the name here if you have other environments
       plugins:
         livereload:
-          enabled: false
+          enabled: true
 
     staging: # change the name here if you have other environments
       plugins:
@@ -29,7 +29,11 @@ docpadConfig = {
                 model.setMetaDefaults({layout:"post"})
 
       pages: ->
-          @getCollection("html").findAllLive({relativeOutDirPath: 'pages',isPage:true})
+        @getCollection("html").findAllLive({relativeOutDirPath: 'pages',isPage:true})
+
+      frontpage: ->
+        @getCollection("html").findAllLive({relativeOutDirPath: $in: ['posts']},[{date: -1}])
+
 
     templateData:
         site:

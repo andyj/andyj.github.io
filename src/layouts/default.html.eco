@@ -9,8 +9,8 @@
   <meta itemprop="creator" content="Andy Jarrett">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta itemprop="description" content="#attributes.title# by Andy Jarrett">
-  <meta itemprop="name" content="Blog of Andy Jarrett - Node.JS, tech and web stuff">
+<!--   <meta itemprop="description" content=" by Andy Jarrett"> -->
+  <meta itemprop="name" content="Blog of Andy Jarrett - Node.JS, tech, Railo, CFML and web stuff">
   <meta name="google-site-verification" content="CDqaY_sxw7luN0EPtFpOxiaJtIv9gog2sMAaT4pU-EI" />
 
   <title><%= @getPreparedTitle() %></title>
@@ -18,7 +18,7 @@
   <!-- Style 'n stuff -->
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss.xml" />
-  <link href="//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/simplex/bootstrap.min.css" rel="stylesheet">
+  <link href="//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/lumen/bootstrap.min.css" rel="stylesheet">
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   <%- @getBlock("styles").add(["/stylesheets/default.css"]).toHTML() %>
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -31,8 +31,8 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-sm-4 col-md-3 sidebar">
+      <h3>Posts</h3>
       <ul class="nav nav-sidebar">
-        <h3>Posts</h3>
         <% for post in @getCollection("posts").toJSON(): %>
         <!-- first it uses the getCollection template helper to fetch the html collection, which is a
           pre-defined collection by DocPad that contains all the HTML documents in our website.  -->
@@ -49,7 +49,7 @@
         <li class="list-group-item"><i class="fa fa-skype"></i> <a rel="me nofollow" href="skype:andy.jarrett?call">Skype andy.jarrett</a></li>
         <li class="list-group-item"><i class="fa fa-envelope-square"></i> <a rel="me nofollow">mail@andyjarrett.co.uk</a></li>
         <!-- <li class="list-group-item"><i class="fa fa-rss-square"></i> <a href="http://feeds.feedburner.com/andyjarrett">RSS</a></li> -->
-        <li class="list-group-item"><i class="fa fa-rss-square"></i> <a href="/rss.xml">RSS</a></li>
+        <li class="list-group-item"><i class="fa fa-rss-square"></i> <a href="http://feeds.feedburner.com/andyjarrett">RSS</a></li>
       </ul>
       <ul class="nav nav-sidebar">
         <% for page in @getCollection("pages").toJSON(): %>
@@ -66,7 +66,7 @@
     </div>
     <div class="col-sm-8 col-sm-offset-4 col-md-9 col-md-offset-3 main">
       <div class="page-header">
-        <h1>Andy Jarrett <small>Node, web dev, etc</small></h1>
+        <h1>Andy Jarrett <small>Web.App.Dev etc</small></h1>
       </div>
       <%- @content %>
     </div>
