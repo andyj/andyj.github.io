@@ -7,7 +7,7 @@ docpadConfig = {
     rss:
       default:
         collection: 'posts'
-        url: '/rss.xml' # optional, this is the default
+        url: 'http://andyj.github.io/rss.xml' # optional, this is the default
     ghpages:
       deployRemote: 'origin'
       deployBranch: 'master'
