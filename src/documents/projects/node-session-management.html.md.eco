@@ -1,0 +1,9 @@
+---
+title: "Node.js and session management"
+isPage: true
+date: 2014-08-08 00:01
+layout: "default"
+---
+
+<h3><%= @document.title %></h3>
+Dumping my thoughts here over time

@@ -1,7 +1,7 @@
 ---
 title: "The first post"
 isPage: true
-date: 2014-08-04
+date: 2014-08-07 23:02
 ---
 I've been working on getting a static blog together since the 2012/2013, with the original idea being to export my whole Blog using node which is something I did at [https://github.com/andyj/blogcfc2html]. Something about the idea of importing 1000+ posts in to a shinny new blog along with issues like broken links to images and external resources never sat well with me. I then saw [Sean's post](http://www.corfield.org/blog/post.cfm/the-blog-is-dead-long-live-the-blog) who has started a new static blog too and to get around the problem of the old content has just left it where it is. Perect. So very opently i'm stealing Sean's idea and leaving everything on [andyjarrett.co.uk](http://www.andyjarrett.co.uk) while I start something new here.
 

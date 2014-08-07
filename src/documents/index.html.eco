@@ -1,0 +1,36 @@
+---
+layout: "default"
+isPage: true
+---
+
+<b>You found the site.</b> This is where I'm now export and dumping anything in my head. Generally this will all be around web developments but it can go left field
+
+<hr>
+
+<% headline = @getCollection("frontpage").toJSON()[0] %>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title"><%= headline.title %></h3>
+  </div>
+  <div class="panel-body">
+    <%= headline.content.substring(0,200) %> . . .
+    <p><a href="<%= headline.url %>">read more</a></p>
+  </div>
+</div>
+
+
+<div class="row">
+  <% for recent in @getCollection("frontpage").toJSON()[1..4]: %>
+    <div class="col-md-4 col-sm-6">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <h4><%= recent.title %></h4>
+          <%= recent.content.substring(0,20) %> . . .
+          <a href="<%= recent.url %>">read more</a>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+

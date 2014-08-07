@@ -11,6 +11,8 @@ docpadConfig = {
     ghpages:
       deployRemote: 'origin'
       deployBranch: 'master'
+
+
   # enabled example for different environments
   environments:
     development: # change the name here if you have other environments
@@ -28,11 +30,11 @@ docpadConfig = {
         @getCollection("html").findAllLive({relativeOutDirPath: 'posts'},[{date:-1}]).on "add", (model) ->
                 model.setMetaDefaults({layout:"post"})
 
-      pages: ->
-        @getCollection("html").findAllLive({relativeOutDirPath: 'pages',isPage:true})
+      projects: ->
+        @getCollection("html").findAllLive({relativeOutDirPath: 'projects',isPage:true})
 
       frontpage: ->
-        @getCollection("html").findAllLive({relativeOutDirPath: $in: ['posts']},[{date: -1}])
+        @getCollection("html").findAllLive({relativeOutDirPath: $in: ['posts','projects']},[{date: -1}])
 
 
     templateData:

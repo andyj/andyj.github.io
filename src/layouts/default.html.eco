@@ -41,32 +41,40 @@
         </li>
         <% end %>
       </ul>
-      <h3>Find me</h3>
-      <ul class="list-group">
-        <li class="list-group-item"><i class="fa fa-twitter-square"></i> <a rel="me nofollow" href="http://www.twitter.com/andyj">Twitter @andyj</a></li>
-        <li class="list-group-item"><i class="fa fa-git-square"></i> <a rel="me nofollow" href="https://github.com/andyj">Github @andyj</a></li>
-        <li class="list-group-item"><i class="fa fa-instagram"></i> <a rel="me nofollow" href="http://instagram.com/andyjarrett">Instagram @andyj</a></li>
-        <li class="list-group-item"><i class="fa fa-skype"></i> <a rel="me nofollow" href="skype:andy.jarrett?call">Skype andy.jarrett</a></li>
-        <li class="list-group-item"><i class="fa fa-envelope-square"></i> <a rel="me nofollow">mail@andyjarrett.co.uk</a></li>
-        <!-- <li class="list-group-item"><i class="fa fa-rss-square"></i> <a href="http://feeds.feedburner.com/andyjarrett">RSS</a></li> -->
-        <li class="list-group-item"><i class="fa fa-rss-square"></i> <a href="http://feeds.feedburner.com/andyjarrett">RSS</a></li>
-      </ul>
+      <h3>Projects</h3>
       <ul class="nav nav-sidebar">
-        <% for page in @getCollection("pages").toJSON(): %>
+        <% for project in @getCollection("projects").toJSON(): %>
         <!-- first it uses the getCollection template helper to fetch the html collection, which is a
           pre-defined collection by DocPad that contains all the HTML documents in our website.  -->
-        <li class="<%= if page.id is @document.id then 'active' else 'inactive' %>">
+        <li class="<%= if project.id is @document.id then 'active' else 'inactive' %>">
         <article itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting"></article>
-          <a href="<%= page.url %>">
-            <%= page.title %>
+          <a href="<%= project.url %>">
+            <%= project.title %>
           </a>
         </li>
         <% end %>
       </ul>
+      <h3>Find me</h3>
+      <ul class="list-group">
+        <li class="list-group-item"><i class="fa fa-twitter-square"></i>
+          <a target="_blank" rel="me nofollow" href="http://www.twitter.com/andyj">Twitter @andyj</a></li>
+        <li class="list-group-item"><i class="fa fa-git-square"></i>
+          <a target="_blank" rel="me nofollow" href="https://github.com/andyj">Github @andyj</a></li>
+        <li class="list-group-item"><i class="fa fa-instagram"></i>
+          <a target="_blank" rel="me nofollow" href="http://instagram.com/andyjarrett">Instagram @andyj</a></li>
+        <li class="list-group-item"><i class="fa fa-skype"></i>
+          <a target="_blank" rel="me nofollow" href="skype:andy.jarrett?call">Skype andy.jarrett</a></li>
+        <li class="list-group-item"><i class="fa fa-envelope-square"></i>
+          <a target="_blank" rel="me nofollow">mail@andyjarrett.co.uk</a></li>
+        <!-- <li class="list-group-item"><i class="fa fa-rss-square"></i>
+          <a href="http://feeds.feedburner.com/andyjarrett">RSS</a></li> -->
+        <li class="list-group-item"><i class="fa fa-rss-square"></i>
+          <a href="http://feeds.feedburner.com/andyjarrett">RSS</a></li>
+      </ul>
     </div>
     <div class="col-sm-8 col-sm-offset-4 col-md-9 col-md-offset-3 main">
       <div class="page-header">
-        <h1>Andy Jarrett <small>Web.App.Dev etc</small></h1>
+        <a href="/" title="Back to the home page" accesskey="h"><h1>Andy Jarrett <small>Web.App.Dev etc</small></h1></a>
       </div>
       <%- @content %>
     </div>
