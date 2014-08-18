@@ -1,3 +1,8 @@
+---
+title: "Installing Current And Previous Packages Via NPM"
+isPage: true
+date: 2014-08-18 23:59
+---
 When coming from Java/CFML to Node.js one of the first tools you come across is the package manager. This allows you to download/add packages globally to your environment or locally to your project (locally is the default way).
 
 ###How to locally install a package

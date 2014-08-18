@@ -3,7 +3,8 @@ title: "NPM not found when using NVM"
 isPage: true
 date: 2014-08-07 23:30
 ---
-Had an issue with NPM not found with an install of Node.js via NVM. Tried `` $ which npm `` and that didn't return anything. As much as I like a puzzle sometimes its easier to start again.
+Had an issue with NPM not found with an install of Node.js via NVM. Tried `` $ which npm `` and that
+didn't return anything. As much as I like a puzzle sometimes its easier to start again.
 
 	$ rm -R ~/.npm
 	$ rm -R ~/.nvm
