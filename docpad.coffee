@@ -27,21 +27,27 @@ docpadConfig = {
 
   collections:
       posts: ->
-        @getCollection("html").findAllLive({relativeOutDirPath: 'posts'},[{date:-1}]).on "add", (model) ->
+        @getCollection("html").findAllLive({relativeOutDirPath: 'posts'},[{date:1}]).on "add", (model) ->
                 model.setMetaDefaults({layout:"post"})
 
       projects: ->
         @getCollection("html").findAllLive({relativeOutDirPath: 'projects',isPage:true})
 
       frontpage: ->
-        @getCollection("html").findAllLive({relativeOutDirPath: $in: ['posts','projects']},[{date: -1}])
+        @getCollection("html").findAllLive({relativeOutDirPath: $in: ['posts','projects']},[{date: 1}])
 
 
     templateData:
-        site:
-            title: "My Website"
+      # Specify some site properties
+      site:
+        # The production URL of our website
+        url: 'http://andyj.github.io'
 
-        getPreparedTitle: -> if @document.title then "#{@document.title} | #{@site.title}" else @site.title
+        # The default title of our website
+        title: "Andy Jarrett Web.App.Dev etc"
+
+
+      getPreparedTitle: -> if @document.title then "#{@document.title} | #{@site.title}" else @site.title
 }
 
 # Export the DocPad Configuration

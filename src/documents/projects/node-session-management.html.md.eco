@@ -6,4 +6,10 @@ layout: "default"
 ---
 
 <h3><%= @document.title %></h3>
-Dumping my thoughts here over time
+Dumping my thoughts here over time. Below is a working app to give an example of how to use sessions in Node.
+
+This is using a MogoDB to hold the sessions, the benefit of this over cookies is when the server restarts the user has not lost their session info.
+
+To get going put package.json in an empty file and run <code>npm install</code>, then add app.js and settings.js. The start the node app.
+
+<script src="https://gist.github.com/andyj/7ad308df3006d388a196.js"></script>
