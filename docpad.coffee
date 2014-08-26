@@ -1,6 +1,12 @@
 # DocPad Configuration File
 # http://docpad.org/docs/config
-
+#
+# To run
+# docpad run
+#
+# To publish
+# $ docpad deploy-ghpages --env static -d
+#
 # Define the DocPad Configuration
 docpadConfig = {
   plugins:
