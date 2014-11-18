@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[Andy Jarrett Web.App.Dev etc]]></title>
+        <description><![CDATA[Andy Jarrett Web.App.Dev etc]]></description>
+        <link>http://andyj.github.io</link>
+        <generator>RSS for Node</generator>
+        <lastBuildDate>Tue, 18 Nov 2014 23:40:10 GMT</lastBuildDate>
+        <atom:link href="http://andyj.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+        <pubDate>Tue, 18 Nov 2014 23:40:06 GMT</pubDate>
+        <item>
+            <title><![CDATA[Welcome to the new home of Andy Jarrett]]></title>
+            <description><![CDATA[<b>You found the site.</b> This is where I'm now export and dumping anything in my head. Generally this will all be around web developments but it can go left field
+
+<hr>
+
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">The first post</h3>
+  </div>
+  <div class="panel-body">
+    I've been working on getting a static blog together since the 2012/2013, with the original idea being to export my whole Blog using node which is something I did at [https://github.com/andyj/blogcfc2h . . .
+    <p><a href="/posts/first-post.html">read more</a></p>
+  </div>
+</div>
+
+
+<div class="row">
+  
+    <div class="col-md-4 col-sm-6">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <h4>NPM not found when using NVM</h4>
+          Had an issue with NP . . .
+          <a href="/posts/npm-not-found-with-nvm.html">read more</a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="col-md-4 col-sm-6">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <h4>Node.js and session management</h4>
+          &lt;h3&gt;&lt;%= @document.ti . . .
+          <a href="/projects/node-session-management.html">read more</a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="col-md-4 col-sm-6">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <h4>Installing Current And Previous Packages Via NPM</h4>
+          When coming from Jav . . .
+          <a href="/posts/installing-current-and-previous-packages-via-npm.html">read more</a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="col-md-4 col-sm-6">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <h4>MongoHub is a native mac GUI application for mongodb</h4>
+          &lt;img src=&quot;/img/mongo . . .
+          <a href="/posts/mongo-gui-for-mac.html">read more</a>
+        </div>
+      </div>
+    </div>
+  
+</div>]]></description>
+            <link>http://andyj.github.io/index.html</link>
+            <guid isPermaLink="true">http://andyj.github.io/index.html</guid>
+            <pubDate>Tue, 26 Aug 2014 20:58:04 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Parse CSV with Node.js]]></title>
+            <description><![CDATA[<p>This is a part of bigger project of node examples that you can find at <a href="https://github.com/andyj/node-example">github.com/andyj/node-example</a>.</p>
+
+<p>Its quite straigh forward, it takes a path of the CSV to parse via the command line call e.g. <code>$ node app.js /PathTo/Your.csv</code> and outputs the contents (an array) to the console.</p>
+
+<p><em><em> n.b. This is Gist might be out of date as I couldn&#39;t find a way to include the <a href="https://github.com/andyj/node-example/blob/master/csvparse/app.js">app.js file</a> directly from the <a href="https://github.com/andyj/node-example/tree/master/csvparse">Github project</a>. </em></em></p>
+
+<script src="https://gist.github.com/andyj/8d40bc394fb44cec5f92.js"></script>]]></description>
+            <link>http://andyj.github.io/new post/parse-csv-with-node-js.html</link>
+            <guid isPermaLink="true">http://andyj.github.io/new post/parse-csv-with-node-js.html</guid>
+            <pubDate>Mon, 01 Sep 2014 22:30:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Node.js Style Guide]]></title>
+            <description><![CDATA[<p>Node.js style <a href="https://github.com/felixge/node-style-guide">github.com/felixge/node-style-guide</a> to help you/team keep consistent which I&#39;m happy about as it generally follows a style I prefer</p>
+
+<blockquote>
+  <p>This is a guide for writing consistent and aesthetically pleasing node.js code. It is inspired by what is popular within the community, and flavored with some personal opinions</p>
+</blockquote>
+
+<ul>
+<li>2 Spaces for indention</li>
+<li>Use Semicolons</li>
+<li>Use single quotes, unless you are writing JSON.</li>
+<li>Opening braces go on the same line <strong>&lt; you know it makes sense</strong></li>
+<li>Declare one variable per var statement <strong>&lt; you know it makes sense</strong></li>
+<li>Use lowerCamelCase for variables, properties and function names</li>
+</ul>
+
+<p>and it goes on <a href="https://github.com/felixge/node-style-guide">.....</a></p>]]></description>
+            <link>http://andyj.github.io/posts/Node-js-style-guide.html</link>
+            <guid isPermaLink="true">http://andyj.github.io/posts/Node-js-style-guide.html</guid>
+            <pubDate>Thu, 04 Sep 2014 21:31:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[The first post]]></title>
+            <description><![CDATA[<p>I&#39;ve been working on getting a static blog together since the 2012/2013, with the original idea being to export my whole Blog using node which is something I did at [<a href='https://github.com/andyj/blogcfc2html'>https://github.com/andyj/blogcfc2html</a>]. Something about the idea of importing 1000+ posts in to a shinny new blog along with issues like broken links to images and external resources never sat well with me. I then saw <a href="http://www.corfield.org/blog/post.cfm/the-blog-is-dead-long-live-the-blog">Sean&#39;s post</a> who has started a new static blog too and to get around the problem of the old content has just left it where it is. Perect. So very opently i&#39;m stealing Sean&#39;s idea and leaving everything on <a href="http://www.andyjarrett.co.uk">andyjarrett.co.uk</a> while I start something new here.</p>
+
+<p>So here I am, now pushing static pages to Github via <a href="http://docpad.org/">docpad</a>.</p>
+
+<p>You can see my set up via <a href="https://github.com/andyj/andyj.github.io/tree/source">github</a> but for a quick overview this is the current modules I&#39;m using:</p>
+
+<pre><code>"docpad-plugin-coffee": "~2.0.2",
+"docpad-plugin-eco": "~2.0.3",
+"docpad-plugin-ghpages": "~2.4.1",
+"docpad-plugin-livereload": "~2.6.0",
+"docpad-plugin-marked": "~2.2.1",
+"docpad-plugin-rss": "~2.0.1"
+</code></pre>
+
+<h4>For my RSS subscribers</h4>
+
+<p>The content here will use my <a href="http://feeds.feedburner.com/andyjarrett">feedburner feed @ feeds.feedburner.com/andyjarrett</a> so if anyone still subscribes via RSS and just expecing CFML/Railo content from me then be warned, it will be limited. If you do want access to my old RSS document you can access that via <a href="http://www.andyjarrett.co.uk/rss.cfm">andyjarrett.co.uk/rss.cfm</a></p>]]></description>
+            <link>http://andyj.github.io/posts/first-post.html</link>
+            <guid isPermaLink="true">http://andyj.github.io/posts/first-post.html</guid>
+            <pubDate>Thu, 07 Aug 2014 22:02:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Installing Current And Previous Packages Via NPM]]></title>
+            <description><![CDATA[<p>When coming from Java/CFML to Node.js one of the first tools you come across is the package manager. This allows you to download/add packages globally to your environment or locally to your project (locally is the default way).</p>
+
+<h3>How to locally install a package</h3>
+
+<p>If you had a single project that used Coffee Script you should change your current directory to your application root directory and run <code>$ npm install coffee-script</code>. This will grab you the latest copy, create a <strong>node_modules</strong> directory, only if it doesn’t already exist, and install the coffe-script module within it.</p>
+
+<h3>How to globally install a package</h3>
+
+<p>You might want to use coffee-script for all your projects. At which point you add the <code>-g</code> flag, so your command becomes <code>$ npm install -g coffee-script</code>. This will put the package in <strong>/usr/local/lib/node_modules</strong>.</p>
+
+<h3>Installing a previous version</h3>
+
+<p>When you start development you could be using version 1.82 of a package but in a couple of months when you bring on another developer they could be on v2.01 which breaks your app. To get around this you can choose which version of a specific module to install by using <code>$ npm install [package name]@[version]</code>. So your new developer would use <code>$ npm install [package name]@1.82</code>.</p>
+
+<p>If the v1 branch is still maintained for bugs etc you can change your call using a wild card to get the latest version by using any of the following<br /><code>$ npm install [package name]@1.x</code><br /><code>$ npm install [package name]@1.8x</code><br /><code>$ npm install [package name]@&lt;2.0</code></p>
+
+<p>You can take this further (though I haven&#39;t found a need for this yet) by  defining the versions like this:<br />`$ npm install [package name]@&quot;&gt;=1.82 &lt;2.0&quot;</p>
+
+<h3>Updating or uninstalling a package</h3>
+
+<p>As easy as it is to install you can update or uninstall a package either locally or globally<br /><code>$ npm update -g [package name]</code><br /><code>$ npm update [package name]</code><br /><code>$ npm uninstall -g [package name]</code><br /><code>$ npm uninstall [package name]</code></p>]]></description>
+            <link>http://andyj.github.io/posts/installing-current-and-previous-packages-via-npm.html</link>
+            <guid isPermaLink="true">http://andyj.github.io/posts/installing-current-and-previous-packages-via-npm.html</guid>
+            <pubDate>Mon, 18 Aug 2014 22:59:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[MongoHub is a native mac GUI application for mongodb]]></title>
+            <description><![CDATA[<p><img src="/img/mongohub.png" alt="mongohub @ mongohub.todayclose.com"></p>
+
+<p><a href="http://mongohub.todayclose.com/">Mongohub</a> is a free mongodb administration tool for mac. Handy if you&#39;re just getting in to NoSQL and coming from other Cocoa apps such as <a href="http://www.sequelpro.com/">Sequel Pro</a> it a nice way to break in to it.</p>]]></description>
+            <link>http://andyj.github.io/posts/mongo-gui-for-mac.html</link>
+            <guid isPermaLink="true">http://andyj.github.io/posts/mongo-gui-for-mac.html</guid>
+            <pubDate>Tue, 26 Aug 2014 21:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Node.js Equivalent to ColdFusion's hash()]]></title>
+            <description><![CDATA[<p>Areference for me more than anything else for duplicating hash(str,&quot;SHA-256&quot;) in node.js</p>
+
+<div class="highlight"><pre lang="javascript">var crypto = require(&#39;crypto&#39;);
+
+var pwd = &quot;Password1!&quot;;
+
+var hash = function(str){
+  return crypto.createHash(&#39;sha256&#39;).update(pwd).digest(&#39;hex&#39;).toUpperCase()
+}
+
+console.log( hash(pwd) );
+</pre></div>]]></description>
+            <link>http://andyj.github.io/posts/node-js-equivalent-coldfusion-hash.html</link>
+            <guid isPermaLink="true">http://andyj.github.io/posts/node-js-equivalent-coldfusion-hash.html</guid>
+            <pubDate>Tue, 18 Nov 2014 23:30:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Node.js examples on Github]]></title>
+            <description><![CDATA[<p>For anyone just starting in node.js or playing around with it I am added my exmaples to a github project at <a href="https://github.com/andyj/node-example">github.com/andyj/node-example</a>.</p>
+
+<p>Currently there are only 3 examples but feel free to send push requests or suggestions on where I&#39;ve gone wrong</p>
+
+<ul>
+<li>Sessions in Node.js <a href='https://github.com/andyj/node-example/tree/master/sessions'>https://github.com/andyj/node-example/tree/master/sessions</a></li>
+<li>MySQL &amp; Node.js <a href='https://github.com/andyj/node-example/tree/master/db-mysql'>https://github.com/andyj/node-example/tree/master/db-mysql</a></li>
+<li>Parsing CSV data with Node.js <a href='https://github.com/andyj/node-example/tree/master/csvparse'>https://github.com/andyj/node-example/tree/master/csvparse</a></li>
+</ul>]]></description>
+            <link>http://andyj.github.io/posts/node-js-examples-on-github.html</link>
+            <guid isPermaLink="true">http://andyj.github.io/posts/node-js-examples-on-github.html</guid>
+            <pubDate>Mon, 01 Sep 2014 10:30:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[NPM not found when using NVM]]></title>
+            <description><![CDATA[<p>Had an issue with NPM not found with an install of Node.js via NVM. Tried <code>$ which npm</code> and that<br />didn&#39;t return anything. As much as I like a puzzle sometimes its easier to start again.</p>
+
+<pre><code>$ rm -R ~/.npm
+$ rm -R ~/.nvm
+$ rm -R ~/.bower
+</code></pre>
+
+<p>Then head back to <a href="https://github.com/creationix/nvm">github.com/creationix/nvm</a> and install again.</p>
+
+<p>Don&#39;t forget to add <code>nvm alias default 0.10</code> to make sure NPM/Node is loading with each new terminal window.</p>]]></description>
+            <link>http://andyj.github.io/posts/npm-not-found-with-nvm.html</link>
+            <guid isPermaLink="true">http://andyj.github.io/posts/npm-not-found-with-nvm.html</guid>
+            <pubDate>Thu, 07 Aug 2014 22:30:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[<p>Using Apache to password protect a single file</p>
+
+<p>I&#39;m going to use the terminal screen for this and assume you&#39;re on *nix but it should be quite simple to take to your operating system</p>
+
+<p>My webroot is at /var/www/securefile/public. The url and page I am trying to proctect is <a href='http://securefile.local/secureme.html'>http://securefile.local/secureme.html</a></p>
+
+<p>Create a text file called .htpasswd away from your webroot. Using my example I&#39;m going to put it in /var/www/securefile/.htpasswd The point is that it shouldn&#39;t be able to access it via a url</p>
+
+<p>Next on the terminal line call htpasswd i.e. $ htpasswd -b passwdfile username<br />$ htpasswd -b /var/www/securefile/.htpasswd andyjarrett</p>
+
+<p>We now need to create (or update if there already) a .htaccess file at<br />/var/www/securefile/public/.htaccess and add the following</p>
+
+<h1>Link to your .htpasswd file</h1>
+
+<p>AuthUserFile /var/www/securefile/.htpasswd</p>
+
+<h1>Name of the page you are securing</h1>
+
+<p>AuthName &quot;My secure page test&quot;</p>
+
+<h1>Type of auth</h1>
+
+<p>AuthType Basic</p>
+
+<h1>Page your are securing</h1>
+
+<p><Files "secureme.html"><br /> require valid-user<br /></Files></p>
+
+<p>Once you&#39;ve saved .htaccess test that the password works by accessing the URL, in my example I&#39;ll go to <a href='http://securefile.local/secureme.html'>http://securefile.local/secureme.html</a></p>]]></description>
+            <link>http://andyj.github.io/posts/using-apache-to-password-protect-a-single-file.html</link>
+            <guid isPermaLink="true">http://andyj.github.io/posts/using-apache-to-password-protect-a-single-file.html</guid>
+            <pubDate>Thu, 11 Sep 2014 14:07:38 GMT</pubDate>
+        </item>
+    </channel>
+</rss>
