@@ -2,6 +2,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<base href="https://www.andyjarrett.com/" />
+<base target="_top" />
+<base target="_top" href="https://andyjarrett.com/" />
+
   <meta charset="UTF-8">
 <meta name="description" content="Andy Jarrett online pressence">
 <meta name="keywords" content="Andy Jarrett, andyjarrett, mytag">
@@ -75,7 +79,11 @@
     <h1 class="mt-5 mb-5"><b>Change Link Color Via Javascript</b></h1>
     <main class="mw fw-lighter fs-5">
       
-<p>Im playing around with a pure HTML site recently (no server side tech at all) and OMG how akward is the simple stuff. To make my life a little more easier I have been using Dreamweaver's templates which make managing layouts easier especially when you have forgotten a navigation link.</p><p>One thing I have been trying to do is change the colour of a selected navigation link. i.e. The navigation links are all blue except for the link to the section you are currently in which is white. I was about to do this with DWMX templates conditional statements, which can get a little messy, and awkard when putting them inline to change the href class atrribute. Doing this with CFMX or PHP is simple and thats what I wanted.</p> <p>So I took a dynamic(ish) approach to the problem and decided to use Js. Reading in the page name from the window.location.pathname string I change the colour of the text. Incase anyone is interested below is the code I used, you'll note that to do this without a switch or if statement I have used the ID attribute, and made it the same as the html page.</p><code><html><head><InvalidTag>function linkHighlight(){  var urlPath = window.location.pathname; var thisPage = urlPath.substring(urlPath.lastIndexOf('/') + 1); var pageName = thisPage.split('.');   document.getElementById(pageName[0]).style.color = '#FFFFFF';}</script></head><body><a href="index.htm" id="index">Home</a><a href="products.htm" id="products">Products</a><a href="projects.htm" id="projects">Projects</a><a href="about_us" id="about_us">About Us</a><a href="contact_us.htm" id="contact_us">Contact Us</a></body></html></code><br>
+<p>Im playing around with a pure HTML site recently (no server side tech at all) and OMG how akward is the simple stuff. To make my life a little more easier I have been using Dreamweaver's templates which make managing layouts easier especially when you have forgotten a navigation link.</p><p>One thing I have been trying to do is change the colour of a selected navigation link. i.e. The navigation links are all blue except for the link to the section you are currently in which is white. I was about to do this with DWMX templates conditional statements, which can get a little messy, and awkard when putting them inline to change the href class atrribute. Doing this with CFMX or PHP is simple and thats what I wanted.</p> <p>So I took a dynamic(ish) approach to the problem and decided to use Js. Reading in the page name from the window.location.pathname string I change the colour of the text. Incase anyone is interested below is the code I used, you'll note that to do this without a switch or if statement I have used the ID attribute, and made it the same as the html page.</p><code><html><head>
+<base href="https://www.andyjarrett.com/" />
+<base target="_top" />
+<base target="_top" href="https://andyjarrett.com/" />
+<InvalidTag>function linkHighlight(){  var urlPath = window.location.pathname; var thisPage = urlPath.substring(urlPath.lastIndexOf('/') + 1); var pageName = thisPage.split('.');   document.getElementById(pageName[0]).style.color = '#FFFFFF';}</script></head><body><a href="index.htm" id="index">Home</a><a href="products.htm" id="products">Products</a><a href="projects.htm" id="projects">Projects</a><a href="about_us" id="about_us">About Us</a><a href="contact_us.htm" id="contact_us">Contact Us</a></body></html></code><br>
     </main>
 
     <div class="row">

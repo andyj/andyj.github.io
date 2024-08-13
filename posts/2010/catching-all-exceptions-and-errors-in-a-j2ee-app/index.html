@@ -2,6 +2,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<base href="https://www.andyjarrett.com/" />
+<base target="_top" />
+<base target="_top" href="https://andyjarrett.com/" />
+
   <meta charset="UTF-8">
 <meta name="description" content="Andy Jarrett online pressence">
 <meta name="keywords" content="Andy Jarrett, andyjarrett, mytag">
@@ -75,7 +79,11 @@
     <h1 class="mt-5 mb-5"><b>Catching all exceptions and errors in a J2EE app</b></h1>
     <main class="mw fw-lighter fs-5">
       
-<p>A lot of the text I have come across that deals with catching errors using the <b>web.xml</b> focuses on specific errors only. Below is some code for catching all generic errors thrown by a servlet.</p><p>First; Put the following in your <b>web.xml</b></p><code><!-- Define an error handler for all Exceptions and Errors --> <error-page>     <exception-type>java.lang.Throwable</exception-type>     <location>/generic_errors.jsp</location> </error-page></code><p>Second; Create a file called <b>/generic_errors.jsp</b> in your web root and add the following.</p><code><%@ page contentType="text/html"%><%@ page language="java"%><%@ page isErrorPage="true" import="java.io.*" %><html><head><title>Something hasn't gone to plan!</title></head></body><h1>Something hasn't gone to plan!</h1><p style="color:red;">An errror has occured. Please use the back button or contact support.</p><pre><%if( request.getRemoteAddr().equals("127.0.0.1") ){ out.print("<b style=\\"color:red\\">The following error has occured: "+ exception.toString() +"</b><br/><br/>");  StringWriter sw = new StringWriter(); PrintWriter pw = new PrintWriter(sw); exception.printStackTrace(pw);  out.print(sw);  sw.close(); pw.close();}%></pre></body></html></code><br>
+<p>A lot of the text I have come across that deals with catching errors using the <b>web.xml</b> focuses on specific errors only. Below is some code for catching all generic errors thrown by a servlet.</p><p>First; Put the following in your <b>web.xml</b></p><code><!-- Define an error handler for all Exceptions and Errors --> <error-page>     <exception-type>java.lang.Throwable</exception-type>     <location>/generic_errors.jsp</location> </error-page></code><p>Second; Create a file called <b>/generic_errors.jsp</b> in your web root and add the following.</p><code><%@ page contentType="text/html"%><%@ page language="java"%><%@ page isErrorPage="true" import="java.io.*" %><html><head>
+<base href="https://www.andyjarrett.com/" />
+<base target="_top" />
+<base target="_top" href="https://andyjarrett.com/" />
+<title>Something hasn't gone to plan!</title></head></body><h1>Something hasn't gone to plan!</h1><p style="color:red;">An errror has occured. Please use the back button or contact support.</p><pre><%if( request.getRemoteAddr().equals("127.0.0.1") ){ out.print("<b style=\\"color:red\\">The following error has occured: "+ exception.toString() +"</b><br/><br/>");  StringWriter sw = new StringWriter(); PrintWriter pw = new PrintWriter(sw); exception.printStackTrace(pw);  out.print(sw);  sw.close(); pw.close();}%></pre></body></html></code><br>
     </main>
 
     <div class="row">
