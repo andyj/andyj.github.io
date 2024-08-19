@@ -7,158 +7,6 @@
     <language>en</language>
     <atom:link href="https://andyjarrett.com/feed.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Shortcut Differences When Moving Between Sublime Text And VScode on Macos</title>
-      <link>https://andyjarrett.com/posts/2024/shortcut-differences-when-moving-between-macos-sublime-text-and-vscode/</link>
-      <description><![CDATA[
-&lt;div class=&quot;image-container my-2&quot;&gt;
-  &lt;img src=&quot;https://andyjarrett.com/public/blogimage/florian-olivo-4hbJ-eymZ1o-unsplash.jpg&quot; alt=&quot;Man running towards mountains&quot; class=&quot;img-fluid&quot; /&gt;
-&lt;/div&gt;
-&lt;div class=&quot;text-end&quot;&gt;
-  &lt;sup&gt;
-    &lt;cite&gt;
-      Photo by &lt;a href=&quot;https://unsplash.com/@florianolv?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash&quot;&gt;Florian Olivo&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/photos/lines-of-html-codes-4hbJ-eymZ1o?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash&quot;&gt;Unsplash&lt;/a&gt;
-    &lt;/cite&gt;
-  &lt;/sup&gt;
-&lt;/div&gt;
-
-&lt;p&gt;
-  &lt;strong&gt;TL;DR:&lt;/strong&gt;
-  the GIST here: &lt;a href=&quot;https://gist.github.com/andyj/bf4082bb6fcf8a432c5aa3526df686b2&quot; target=&quot;_blank&quot;&gt;gist.github.com/andyj/bf4082bb6fcf8a432c5aa3526df686b2&lt;/a&gt;
-&lt;/p&gt;
-&lt;p&gt;As I transition between &lt;a href=&quot;https://www.sublimetext.com/&quot; target=&quot;_blank&quot;&gt;Sublime Text&lt;/a&gt;, my preferred editor for its speed, and &lt;a href=&quot;https://code.visualstudio.com/&quot; target=&quot;_blank&quot;&gt;VSCode&lt;/a&gt;, which I appreciate for its functionality despite some layout and design choices, the biggest challenge has been adjusting to the new shortcuts. Here is a list of the different shortcuts between the two editors that I have compiled to ease this transition:&lt;/p&gt;
-
-&lt;p&gt;I&#39;ve made this into a &lt;a href=&quot;https://gist.github.com/andyj/bf4082bb6fcf8a432c5aa3526df686b2&quot; target=&quot;_blank&quot;&gt;GIST&lt;/a&gt; so it can be edited and updated, as there are probably many I have still missed.&lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/andyj/bf4082bb6fcf8a432c5aa3526df686b2.js&quot;&gt;&lt;/script&gt;
-
-]]></description>
-      <pubDate>Tue, 18 Jun 2024 10:30:00 +0000</pubDate>
-      <dc:creator>Andy Jarrett</dc:creator>
-      <guid>https://andyjarrett.com/posts/2024/shortcut-differences-when-moving-between-macos-sublime-text-and-vscode/</guid>
-      <enclosure url="https://andyjarrett.com/public/blogimage/florian-olivo-4hbJ-eymZ1o-unsplash.jpg" type="image/jpeg" />
-      <category>posts, shortcuts, code, sublime</category>
-      <author>Andy Jarrett &lt;email@example.com&gt;</author>
-    </item>
-    <item>
-      <title>Demystifying DMARC</title>
-      <link>https://andyjarrett.com/posts/2024/Demystifying-DMARC/</link>
-      <description><![CDATA[
-&lt;p&gt;One of the recent items I&#39;ve been overseeing internally is ensuring that every email sent from our domain genuinely belongs to us. This is paramount nowadays, especially with the increasing sophistication of email scams. DMARC is a guardian for your email&#39;s reputation. It&#39;s important to note that DMARC is just one part of a trio, with the other two being Sender Policy Framework (SPF) and DomainKeys Identified Mail (DKIM).&lt;/p&gt;
-
-&lt;p&gt;Implementing DMARC is one thing but explaining in simple terms can often be challenging. With this in mind, I created this post to help others (and me when I come back to this) understand and implement DMARC effectively. Hopefully, this makes it more accessible and understandable for everyone to see the crucial role DMARC plays in protecting your email domain.&lt;/p&gt;
-
-&lt;h6&gt;A DMARC report, presented in XML format, is like a detailed note from your mailbox. It tells you a few important things:&lt;/h6&gt;
-
-&lt;ul class=&quot;mt-3&quot;&gt;
-  &lt;li&gt;&lt;strong&gt;Who&#39;s Sending Letters in Your Name:&lt;/strong&gt; It shows which emails have been sent from your domain (like example.com).&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Checking the Signature:&lt;/strong&gt; It checks if these emails have a special signature (called DKIM) that proves they&#39;re really from you. A correct signature is akin to a secret handshake that only you and your friends know.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Where the Letters are Posted From:&lt;/strong&gt; It examines where the emails are being sent from (SPF). If an email claims to be from you but is sent from an unfamiliar location, the mailbox gets suspicious.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;What Happens to Odd Letters:&lt;/strong&gt; If an email looks odd (fails DKIM or SPF checks), the mailbox decides what to do based on the rules you&#39;ve set. Maybe it puts them in a special &#39;maybe dodgy&#39; part of the mailbox (quarantine), or perhaps it discards them outright.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Telling You the Story:&lt;/strong&gt; After all this, the smart mailbox compiles a report about what emails it received, their origins, whether they had the correct secret handshake, and what it did with the odd ones.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;In essence, a DMARC report acts as your personal auditor, meticulously tracking the authenticity of each email associated with your domain. It&#39;s a tool that not only identifies imposters but also aids in making informed decisions to strengthen your email security. By providing a transparent overview of your email&#39;s health, DMARC ensures that your digital correspondence remains trusted and secure.&lt;/p&gt;
-
-&lt;p&gt;I won&#39;t delve into the details in this post (perhaps in a future one), but essentially DMARC is a TXT record published in the DNS for a specific domain, outlining the policy for email authentication, reporting, and conformance. Here&#39;s an example DMARC record for the domain example.com:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;v=DMARC1; p=none; rua=mailto:dmarc-reports@example.com; ruf=mailto:dmarc-failures@example.com; fo=1; &lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;In short, a DMARC report helps you keep an eye on your &#39;email mailbox&#39;, ensuring that no one is pretending to be you and that your friends (people you email) can trust the letters they receive in your name. It&#39;s an effective way to stop tricksters and maintain your email reputation.&lt;/p&gt;
-
-&lt;p&gt;Jumping on the DMARC bandwagon is more than just a techie step; it&#39;s about keeping your email chats as real and as secure as the talks we have over coffee. In our fast-moving digital world, getting DMARC on your side isn&#39;t just smart; it&#39;s a must for anyone who wants to keep their email game safe and sound.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://mxtoolbox.com/dmarc.aspx&quot; target=&quot;_blank&quot;&gt;Check your DMARC/DKIM/SPF records now&lt;/a&gt;&lt;/p&gt;
-]]></description>
-      <pubDate>Tue, 18 Jun 2024 15:30:00 +0000</pubDate>
-      <dc:creator>Andy Jarrett</dc:creator>
-      <guid>https://andyjarrett.com/posts/2024/Demystifying-DMARC/</guid>
-      <enclosure url="https://andyjarrett.com/undefined" type="image/jpeg" />
-      <category>posts, EMAIL, DMARC</category>
-      <author>Andy Jarrett &lt;email@example.com&gt;</author>
-    </item>
-    <item>
-      <title>How to Set Up Automatic Updates on Ubuntu 22.04.4 LTS</title>
-      <link>https://andyjarrett.com/posts/2024/how-to-set-up-automatic-updates-on-ubuntu-22-lts/</link>
-      <description><![CDATA[
-
-
-
-
-&lt;div class=&quot;image-container my-2&quot;&gt;
-  &lt;img src=&quot;https://andyjarrett.com/public/blogimage/gabriel-heinzer-4Mw7nkQDByk-unsplash.jpg&quot; alt=&quot;Ubuntu Prompt&quot; class=&quot;img-fluid&quot; /&gt;
-&lt;/div&gt;
-&lt;div class=&quot;text-end&quot;&gt;
-  &lt;sup&gt;
-    &lt;cite&gt;Photo by &lt;a href=&quot;https://unsplash.com/@6heinz3r?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash&quot;&gt;Gabriel Heinzer&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/photos/text-4Mw7nkQDByk?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash&quot;&gt;Unsplash&lt;/a&gt;&lt;/cite&gt;
-  &lt;/sup&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;container mt-5&quot;&gt;
-  &lt;h1 class=&quot;mb-4&quot;&gt;How to Set Up Automatic Updates on Ubuntu 22.04.4 LTS&lt;/h1&gt;
-  &lt;p&gt;I don&#39;t set up servers often, but this is always something I need to find, so I&#39;m leaving this here for me, for later. In fact I might turn this in to a GIST later for feedback.&lt;/p&gt;
-  &lt;p&gt;The idea of this to to help set up Ubuntu 22.04.4 LTS, to ensure all critical updates are installed without manual intervention using the &lt;code&gt;unattended-upgrades&lt;/code&gt; package.&lt;/p&gt;
-
-  &lt;h3&gt;Step 1: Install Unattended Upgrades&lt;/h3&gt;
-  &lt;p&gt;First, ensure the &lt;code&gt;unattended-upgrades&lt;/code&gt; package is installed. Open a terminal and run:&lt;/p&gt;
-  &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;sudo apt update &amp;&amp; sudo apt install unattended-upgrades&lt;/code&gt;&lt;/pre&gt;
-
-  &lt;h3&gt;Step 2: Enable Unattended Upgrades&lt;/h3&gt;
-  &lt;p&gt;Next, enable automatic updates by running the following command with high priority for a quicker setup:&lt;/p&gt;
-  &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;sudo dpkg-reconfigure --priority=high unattended-upgrades&lt;/code&gt;&lt;/pre&gt;
-
-  &lt;h4 class=&quot;text-primary&quot;&gt;Why Choose &quot;High&quot; Priority?&lt;/h4&gt;
-  &lt;p&gt;Choosing the &quot;high&quot; priority setting simplifies the configuration process by focusing on essential settings. This is  useful if you want to quickly enable automatic updates without being prompted to much. Might not be for everyone one, but works for me.&lt;/p&gt;
-
-  &lt;h3&gt;Step 3: Configure Unattended Upgrades&lt;/h3&gt;
-  &lt;p&gt;To fine-tune which updates are installed, edit the configuration file:&lt;/p&gt;
-  &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;sudo nano /etc/apt/apt.conf.d/50unattended-upgrades&lt;/code&gt;&lt;/pre&gt;
-  &lt;p&gt;In this file, locate the &lt;code&gt;Unattended-Upgrade::Allowed-Origins&lt;/code&gt; section. By default, it might look like this:&lt;/p&gt;
-  &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;Unattended-Upgrade::Allowed-Origins {
-  &quot;${distro_id}:${distro_codename}&quot;;
-  &quot;${distro_id}:${distro_codename}-security&quot;;
-  // &quot;${distro_id}:${distro_codename}-updates&quot;;
-  // &quot;${distro_id}:${distro_codename}-proposed&quot;;
-  // &quot;${distro_id}:${distro_codename}-backports&quot;;
-};&lt;/code&gt;&lt;/pre&gt;
-  &lt;p&gt;Uncomment the lines for &lt;code&gt;-updates&lt;/code&gt; and &lt;code&gt;-backports&lt;/code&gt; to include these in your automatic updates:&lt;/p&gt;
-  &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;Unattended-Upgrade::Allowed-Origins {
-  &quot;${distro_id}:${distro_codename}&quot;;
-  &quot;${distro_id}:${distro_codename}-security&quot;;
-  &quot;${distro_id}:${distro_codename}-updates&quot;;
-  &quot;${distro_id}:${distro_codename}-backports&quot;;
-};&lt;/code&gt;&lt;/pre&gt;
-
-  &lt;h3&gt;Step 4: Configure the Update Interval&lt;/h3&gt;
-  &lt;p&gt;Edit the &lt;code&gt;20auto-upgrades&lt;/code&gt; file to set how frequently the system checks for updates:&lt;/p&gt;
-  &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;sudo nano /etc/apt/apt.conf.d/20auto-upgrades&lt;/code&gt;&lt;/pre&gt;
-  &lt;p&gt;Add or modify the following lines:&lt;/p&gt;
-  &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;APT::Periodic::Update-Package-Lists &quot;1&quot;;
-APT::Periodic::Download-Upgradeable-Packages &quot;1&quot;;
-APT::Periodic::AutocleanInterval &quot;7&quot;;
-APT::Periodic::Unattended-Upgrade &quot;1&quot;;&lt;/code&gt;&lt;/pre&gt;
-  &lt;ul&gt;
-    &lt;li&gt;&lt;code&gt;Update-Package-Lists &quot;1&quot;;&lt;/code&gt; – Update the package list daily.&lt;/li&gt;
-    &lt;li&gt;&lt;code&gt;Download-Upgradeable-Packages &quot;1&quot;;&lt;/code&gt; – Download package updates daily.&lt;/li&gt;
-    &lt;li&gt;&lt;code&gt;AutocleanInterval &quot;7&quot;;&lt;/code&gt; – Clean up old packages every 7 days.&lt;/li&gt;
-    &lt;li&gt;&lt;code&gt;Unattended-Upgrade &quot;1&quot;;&lt;/code&gt; – Install updates daily.&lt;/li&gt;
-  &lt;/ul&gt;
-
-  &lt;h3&gt;Step 5: Verify the Configuration&lt;/h3&gt;
-  &lt;p&gt;Run a dry-run to ensure your configuration is correct:&lt;/p&gt;
-  &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;sudo unattended-upgrades --dry-run --debug&lt;/code&gt;&lt;/pre&gt;
-
-
-  &lt;p&gt;This setup ensures your Ubuntu system remains secure and efficient by automatically applying the latest updates without requiring manual intervention. Happy updating!&lt;/p&gt;
-&lt;/div&gt;
-]]></description>
-      <pubDate>Tue, 09 Jul 2024 10:30:00 +0000</pubDate>
-      <dc:creator>Andy Jarrett</dc:creator>
-      <guid>https://andyjarrett.com/posts/2024/how-to-set-up-automatic-updates-on-ubuntu-22-lts/</guid>
-      <enclosure url="https://andyjarrett.com/public/blogimage/gabriel-heinzer-4Mw7nkQDByk-unsplash.jpg" type="image/jpeg" />
-      <category>posts, ubuntu, update, guide, examples</category>
-      <author>Andy Jarrett &lt;email@example.com&gt;</author>
-    </item>
-    <item>
       <title>Exploring Timestamps and Millisecond Precision with MariaDB</title>
       <link>https://andyjarrett.com/posts/2023/exploring-millisecond-precision-in-mariadb-timestamps/</link>
       <description><![CDATA[
@@ -932,11 +780,328 @@ Process Count: 1&lt;/code&gt;&lt;/pre&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 ]]></description>
-      <pubDate>Thu, 15 Aug 2024 19:02:00 +0000</pubDate>
+      <pubDate>Tue, 13 Aug 2024 19:02:00 +0000</pubDate>
       <dc:creator>Andy Jarrett</dc:creator>
       <guid>https://andyjarrett.com/posts/2024/utility-console-methods-for-debugging-workflow/</guid>
       <enclosure url="https://andyjarrett.com/public/blogimage/altumcode-PNbDkQ2DDgM-unsplash.jpg" type="image/jpeg" />
       <category>posts, javascript, console, debug, utility</category>
+      <author>Andy Jarrett &lt;email@example.com&gt;</author>
+    </item>
+    <item>
+      <title>Comments Via Giscus Now Live My Blog</title>
+      <link>https://andyjarrett.com/posts/2024/comments-via-giscus-now-live-on-my-blog/</link>
+      <description><![CDATA[
+&lt;div class=&quot;image-container my-2&quot;&gt;
+  &lt;img src=&quot;https://andyjarrett.com/public/blogimage/matt-botsford-ncmg3-bQzvQ-unsplash.jpg&quot; alt=&quot;Man running towards mountains&quot; class=&quot;img-fluid&quot; /&gt;
+&lt;/div&gt;
+&lt;div class=&quot;text-end&quot;&gt;
+  &lt;sup&gt;
+    &lt;cite&gt;
+      Photo by &lt;a href=&quot;https://unsplash.com/@mattbotsford?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash&quot;&gt;Matt Botsford&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/photos/green-steel-box-with-fine-printed-sticker-ncmg3-bQzvQ?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash&quot;&gt;Unsplash&lt;/a&gt;
+    &lt;/cite&gt;
+  &lt;/sup&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;Comments via &lt;a href=&quot;https://giscus.app/&quot;&gt;Giscus&lt;/a&gt; are now live on my blog!&lt;/p&gt;
+
+&lt;p&gt;Seriously, I don&#39;t know who even comes across my blog nowadays, are people still using RSS Readers? Either way I’ve been meaning to add a comment system to the blog for a while and was looking at options like &lt;a href=&quot;https://utteranc.es/&quot; target=&quot;_blank&quot;&gt;Utterances&lt;/a&gt; when I came across Giscus.&lt;/p&gt;
+
+&lt;p&gt;After some consideration, I chose &lt;a href=&quot;https://giscus.app/&quot;&gt;Giscus&lt;/a&gt; for a few key reasons:&lt;/p&gt;
+
+&lt;ul class=&quot;mt-3&quot;&gt;
+  &lt;li&gt;&lt;strong&gt;Integration with GitHub Discussions:&lt;/strong&gt; This ensures that comments are secure and benefits from GitHub’s platform.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Enhanced Moderation:&lt;/strong&gt; Giscus provides better tools for managing and moderating comments.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Seamless User Experience:&lt;/strong&gt; It’s easy for you to leave comments and engage in discussions without needing to sign up for another service.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Happy commenting to the few people that find this place!&lt;/p&gt;
+]]></description>
+      <pubDate>Wed, 14 Aug 2024 21:00:00 +0000</pubDate>
+      <dc:creator>Andy Jarrett</dc:creator>
+      <guid>https://andyjarrett.com/posts/2024/comments-via-giscus-now-live-on-my-blog/</guid>
+      <enclosure url="https://andyjarrett.com/public/blogimage/matt-botsford-ncmg3-bQzvQ-unsplash.jpg" type="image/jpeg" />
+      <category>posts, BLOG, COMMENTS, GISCUS</category>
+      <author>Andy Jarrett &lt;email@example.com&gt;</author>
+    </item>
+    <item>
+      <title>Creating an Alpine.js RSS Reader with my Bluesky Profile feed</title>
+      <link>https://andyjarrett.com/posts/2024/creating-an-alpinejs-rss-reader-using-bluesky-profiles/</link>
+      <description><![CDATA[
+&lt;div class=&quot;image-container my-2&quot;&gt;
+  &lt;img src=&quot;https://andyjarrett.com/public/blogimage/alex-david-ile-n02CzpY8ZSA-unsplash.jpg&quot; alt=&quot;Developer debugging&quot; class=&quot;img-fluid&quot; /&gt;
+&lt;/div&gt;
+&lt;div class=&quot;text-end&quot;&gt;
+  &lt;sup&gt;
+    &lt;cite&gt;
+      Photo by &lt;a href=&quot;https://unsplash.com/@alexdaveid?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash&quot;&gt;Alex-David Ile&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/photos/a-group-of-stones-sitting-on-top-of-a-white-table-n02CzpY8ZSA?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash&quot;&gt;Unsplash&lt;/a&gt;
+    &lt;/cite&gt;
+  &lt;/sup&gt;
+&lt;/div&gt;
+
+
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col&quot;&gt;
+    &lt;p&gt;
+      Unlike Twitter, &lt;a href=&quot;https://bsky.app/&quot;&gt;Bluesky &lt;/a&gt; allows you to get a RSS feed of your &lt;a href=&quot;https://bsky.app/profile/andyjarrett.com/rss&quot;&gt;profile&lt;/a&gt;. Which is pretty cool as RSS is a great way to play to pulling in data from an external source when you are learning any code. Sure its no JSON but we can handle that another day.
+    &lt;/p&gt;
+    &lt;p&gt;
+      In this post, I am creating a simple single-page application (SPA) using &lt;a href=&quot;https://alpinejs.dev/&quot;&gt;Alpine.js&lt;/a&gt; that pulls in an RSS feed from my Bluesky profile. With the growing interest in decentralised social networks like Bluesky, especially as Twitter reinstates previously banned accounts, this approach offers a fresh alternative for staying connected.
+    &lt;/p&gt;
+    &lt;p&gt;
+      I&#39;ll also cover why I&#39;m using the free proxy service  &lt;a href=&quot;https://allorigins.win/&quot;&gt;AllOrigins&lt;/a&gt;, which I find helpful for fetching these feeds.
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+
+&lt;p&gt;&lt;b&gt;Here is the HTML which is straight forward, and commented for reference:&lt;/b&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-html&quot;&gt;&amp;lt;div class=&quot;container&quot;&gt;
+
+  &amp;lt;!-- Initialise the Alpine.js component with data from rssFeed() function --&gt;
+  &amp;lt;!-- Automatically fetch the feed when the component is initialised --&gt;
+  &amp;lt;div x-data=&quot;rssFeed()&quot; x-init=&quot;fetchFeed()&quot;&gt;
+
+    &amp;lt;!-- Header for the RSS reader application --&gt;
+    &amp;lt;h1&gt;Alpine.js RSS Reader Parsing Bluesky User Feed&amp;lt;/h1&gt;
+
+    &amp;lt;!-- Display a loading message while the feed is being fetched --&gt;
+    &amp;lt;div x-show=&quot;loading&quot;&gt;Loading...&amp;lt;/div&gt;
+
+    &amp;lt;!-- Display an error message if fetching the feed fails --&gt;
+    &amp;lt;div x-show=&quot;!loading &amp;&amp; error&quot; class=&quot;error&quot;&gt;
+      &amp;lt;p&gt;Error loading feed: &amp;lt;span x-text=&quot;error&quot;&gt;&amp;lt;/span&gt;&amp;lt;/p&gt;
+    &amp;lt;/div&gt;
+    &amp;lt;div class=&quot;row justify-content-center&quot;&gt;
+      &amp;lt;div class=&quot;col-md-6 col-sm-12&quot;&gt;
+
+        &amp;lt;!-- Display the feed items once loading is complete and no errors occurred --&gt;
+        &amp;lt;div x-show=&quot;!loading &amp;&amp; !error&quot;&gt;
+
+          &amp;lt;!-- Loop through each item in the feedItems array and create a card for each --&gt;
+          &amp;lt;template x-for=&quot;item in feedItems&quot; :key=&quot;item.link&quot;&gt;
+            &amp;lt;div class=&quot;card border-primary mb-3&quot;&gt;
+
+              &amp;lt;!-- Display the description of the current feed item --&gt;
+              &amp;lt;div class=&quot;card-body&quot;&gt;
+                &amp;lt;p class=&quot;card-text&quot; x-text=&quot;item.description&quot;&gt;&amp;lt;/p&gt;
+              &amp;lt;/div&gt;
+
+              &amp;lt;!-- Display the publication date and link to the original post --&gt;
+              &amp;lt;div class=&quot;card-footer text-body-secondary&quot;&gt;
+                Posted: &amp;lt;a :href=&quot;item.link&quot; target=&quot;_blank&quot; x-text=&quot;formatDate(item.pubDate)&quot;&gt;&amp;lt;/a&gt;
+              &amp;lt;/div&gt;
+            &amp;lt;/div&gt;
+          &amp;lt;/template&gt;
+        &amp;lt;/div&gt;
+      &amp;lt;/div&gt;
+    &amp;lt;/div&gt;
+  &amp;lt;/div&gt;
+&amp;lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;b&gt;There alpine.js script is straight forward as well.&lt;/b&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;&amp;lt;script&gt;
+  // Function to manage RSS feed data and logic
+  function rssFeed() {
+    return {
+      feedItems: [], // Array to store the parsed RSS feed items
+      loading: true, // Boolean to track the loading state
+      error: null, // Variable to store any error messages
+
+      // Async function to fetch and process the RSS feed
+      async fetchFeed() {
+        // URL for the RSS feed, fetched via AllOrigins proxy to bypass CORS issues
+        const feedUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(&#39;https://bsky.app/profile/did:plc:bd3g6lum2orsqnolbu4urvxj/rss&#39;)}`;
+        try {
+          // Fetch the RSS feed using the AllOrigins API
+          const response = await fetch(feedUrl);
+          // Parse the response as JSON
+          const data = await response.json();
+          // Use DOMParser to convert the RSS feed from XML to a DOM object
+          const parser = new DOMParser();
+          const xml = parser.parseFromString(data.contents, &#39;text/xml&#39;);
+          // Select all &lt;item&gt; elements from the RSS feed
+          const items = xml.querySelectorAll(&#39;item&#39;);
+          // Map over each item to extract the relevant data (link, publication date, description)
+          this.feedItems = Array.from(items).map(item =&gt; ({
+            link: item.querySelector(&#39;link&#39;).textContent, // Extract the link to the full post
+            pubDate: item.querySelector(&#39;pubDate&#39;).textContent, // Extract the publication date
+            description: item.querySelector(&#39;description&#39;).textContent // Extract the description
+          }));
+        } catch (error) {
+          // Handle errors by setting the error message and logging the error
+          this.error = &#39;Failed to load the feed. Please try again later.&#39;;
+          console.error(error.message);
+        } finally {
+          // Set loading to false once the fetch operation is complete, whether successful or not
+          this.loading = false;
+        }
+      },
+
+      // A quick function to format the publication date in a readable format
+      formatDate(dateString) {
+        const options = { year: &#39;numeric&#39;, month: &#39;long&#39;, day: &#39;numeric&#39;, hour: &#39;numeric&#39;, minute: &#39;numeric&#39;, second: &#39;numeric&#39;, timeZoneName: &#39;short&#39; };
+        const date = new Date(dateString);
+        return date.toLocaleDateString(undefined, options);
+      }
+    };
+  }
+&amp;lt;/script&gt;&lt;/item&gt;&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col&quot;&gt;
+    &lt;h3&gt;The Role of AllOrigins as a Proxy in the above code&lt;/h3&gt;
+    &lt;p&gt;
+      When trying to fetch RSS feeds directly from a different domain (in my case, Bluesky), you might encounter cross-origin resource sharing (CORS) issues. This is where AllOrigins comes in handy to know/use. It acts as a proxy that fetches the content for you, bypassing CORS restrictions and delivering the data without errors.
+    &lt;/p&gt;
+
+    &lt;p&gt;Thats it. By combining Alpine.js, Bluesky&#39;s RSS feeds, and AllOrigins, you can build a simple yet effective SPA that displays the latest content from any Bluesky profile.&lt;/p&gt;
+
+    &lt;p&gt;Come and find me on &lt;a href=&quot;https://bsky.app/profile/andyjarrett.com&quot;&gt;BlueSky at bsky.app/profile/andyjarrett.com&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;You can find this code on &lt;a href=&quot;https://github.com/andyj/alpine.js-rss-reader&quot;&gt;Github&lt;/a&gt;, without all the comments, with my plan to add &lt;a href=&quot;https://htmx.org/&quot;&gt;HTMX&lt;/a&gt; as well to load in the &quot;tweets&quot; &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;]]></description>
+      <pubDate>Thu, 15 Aug 2024 19:02:00 +0000</pubDate>
+      <dc:creator>Andy Jarrett</dc:creator>
+      <guid>https://andyjarrett.com/posts/2024/creating-an-alpinejs-rss-reader-using-bluesky-profiles/</guid>
+      <enclosure url="https://andyjarrett.com/public/blogimage/alex-david-ile-n02CzpY8ZSA-unsplash.jpg" type="image/jpeg" />
+      <category>posts, javascript, console, debug</category>
+      <author>Andy Jarrett &lt;email@example.com&gt;</author>
+    </item>
+    <item>
+      <title>Adding localStorage to the Alpine.js RSS Reader</title>
+      <link>https://andyjarrett.com/posts/2024/adding-local-storage-for-faster-development-to-the-alpinejs-rss-reader/</link>
+      <description><![CDATA[
+&lt;div class=&quot;image-container my-2&quot;&gt;
+  &lt;img src=&quot;https://andyjarrett.com/public/blogimage/nathalia-segato-auQGug8wkLM-unsplash.jpg&quot; alt=&quot;Developer debugging&quot; class=&quot;img-fluid&quot; /&gt;
+&lt;/div&gt;
+&lt;div class=&quot;text-end&quot;&gt;
+  &lt;sup&gt;
+    &lt;cite&gt;
+      Photo by &lt;a href=&quot;https://unsplash.com/@trintaycinco?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash&quot;&gt;Nathalia Segato&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/photos/a-store-front-at-night-with-a-person-walking-in-the-doorway-auQGug8wkLM?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash&quot;&gt;Unsplash&lt;/a&gt;
+    &lt;/cite&gt;
+  &lt;/sup&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The purpose of the blog post is to explain why I am adding &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage&quot;&gt;localStorage&lt;/a&gt; to my simple app at &lt;a href=&quot;https://github.com/andyj/alpine.js-rss-reader&quot; target=&quot;_blank&quot;&gt;github.com/andyj/alpine.js-rss-reader&lt;/a&gt;. If you haven&#39;t see it already, this is carrying on from my &lt;a href=&quot;https://andyjarrett.com/posts/2024/creating-an-alpinejs-rss-reader-using-bluesky-profiles/&quot;&gt;previous post&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4&gt;Why Use Local Storage?&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;Faster Development:&lt;/strong&gt; Highlight that local storage helps reduce the need to constantly fetch data from the server, which speeds up the development process since the results are instantly available from the cache.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Reduced Server Load:&lt;/strong&gt; Explain that using local storage reduces the number of requests made to the server, which can be particularly important if there are API rate limits or if the server is slow.&lt;/p&gt;
+
+&lt;p&gt;There isn&#39;t many changes, so its a quick walk through of the key parts of the code where we add local storage functionality:&lt;/p&gt;
+
+&lt;h3 class=&quot;mt-4&quot;&gt;1. Introducing Cache Keys&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;const cacheKey = &#39;rssFeedCache&#39;;
+const cacheExpiryKey = &#39;rssFeedCacheExpiry&#39;;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;These keys will store the fetched RSS feed and its expiry time in local storage.&lt;/p&gt;
+
+&lt;h3 class=&quot;mt-4&quot;&gt;2. Checking for Cached Data&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;const cachedData = localStorage.getItem(cacheKey);
+const cacheExpiry = localStorage.getItem(cacheExpiryKey);
+const now = new Date().getTime();&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Before making a new request, the code checks if there’s valid cached data to use.&lt;/p&gt;
+
+&lt;h3 class=&quot;mt-4&quot;&gt;3. Using Cached Data if Valid&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;if (cachedData &amp;&amp; cacheExpiry &amp;&amp; now &lt; cacheExpiry) {
+  this.feedItems = JSON.parse(cachedData);
+  this.loading = false;
+  console.info(&quot;Results from cache&quot;);
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If the cache is still valid, the feed is loaded from local storage, saving the need for a server request.&lt;/p&gt;
+
+&lt;h3 class=&quot;mt-4&quot;&gt;4. Fetching and Caching New Data&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;const response = await fetch(feedUrl);
+const data = await response.json();
+const parser = new DOMParser();
+const xml = parser.parseFromString(data.contents, &#39;text/xml&#39;);
+const items = xml.querySelectorAll(&#39;item&#39;);
+this.feedItems = Array.from(items).map(item =&gt; ({
+  link: item.querySelector(&#39;link&#39;).textContent,
+  pubDate: item.querySelector(&#39;pubDate&#39;).textContent,
+  description: item.querySelector(&#39;description&#39;).textContent
+}));
+
+localStorage.setItem(cacheKey, JSON.stringify(this.feedItems));
+localStorage.setItem(cacheExpiryKey, now + 5 * 60 * 1000); // Cache expiry set to 5 minutes
+console.info(&quot;New results stored in cache&quot;);&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If there’s no valid cache, the code fetches new data, updates the feed items, and caches the results for future use.&lt;/p&gt;
+
+&lt;h2 class=&quot;mt-5&quot;&gt;Putting it all together&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;function rssFeed() {
+return {
+  feedItems: [],
+  loading: true,
+  error: null,
+
+  async fetchFeed() {
+    const feedUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(&#39;https://bsky.app/profile/did:plc:bd3g6lum2orsqnolbu4urvxj/rss&#39;)}`;
+    const cacheKey = &#39;rssFeedCache&#39;;
+    const cacheExpiryKey = &#39;rssFeedCacheExpiry&#39;;
+
+    // Check if cached data is available and valid
+    const cachedData = localStorage.getItem(cacheKey);
+    const cacheExpiry = localStorage.getItem(cacheExpiryKey);
+    const now = new Date().getTime();
+
+    if (cachedData &amp;&amp; cacheExpiry &amp;&amp; now &lt; cacheExpiry) {
+      // Use cached data
+      this.feedItems = JSON.parse(cachedData);
+      this.loading = false;
+      console.info(&quot;Results from cache&quot;);
+    } else {
+      try {
+        const response = await fetch(feedUrl);
+        const data = await response.json();
+        const parser = new DOMParser();
+        const xml = parser.parseFromString(data.contents, &#39;text/xml&#39;);
+        const items = xml.querySelectorAll(&#39;item&#39;);
+        this.feedItems = Array.from(items).map(item =&gt; ({
+          link: item.querySelector(&#39;link&#39;).textContent,
+          pubDate: item.querySelector(&#39;pubDate&#39;).textContent,
+          description: item.querySelector(&#39;description&#39;).textContent
+        }));
+
+        // Store the new data in local storage
+        localStorage.setItem(cacheKey, JSON.stringify(this.feedItems));
+        localStorage.setItem(cacheExpiryKey, now + 5 * 60 * 1000); // Set cache expiry to 5 minutes from now
+        console.info(&quot;New results stored in cache&quot;);
+      } catch (error) {
+        this.error = &#39;Failed to load the feed. Please try again later.&#39;;
+        console.error(error.message);
+      } finally {
+        this.loading = false;
+      }
+    }
+  },
+
+  formatDate(dateString) {
+    const options = { year: &#39;numeric&#39;, month: &#39;long&#39;, day: &#39;numeric&#39;, hour: &#39;numeric&#39;, minute: &#39;numeric&#39;, second: &#39;numeric&#39;, timeZoneName: &#39;short&#39; };
+    const date = new Date(dateString);
+    return date.toLocaleDateString(undefined, options);
+  }
+};
+}&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Clearing Cache:&lt;/strong&gt; You can manually clear the cache using &lt;code&gt;localStorage.removeItem(&#39;rssFeedCache&#39;)&lt;/code&gt; if the cached data becomes stale or corrupted.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Optimising Cache Duration:&lt;/strong&gt; You may want to experiment with the cache duration (&lt;code&gt;now + 5 * 60 * 1000&lt;/code&gt;) depending on how frequently the RSS feed updates. &lt;/li&gt;
+&lt;/ul&gt;
+
+
+]]></description>
+      <pubDate>Sun, 18 Aug 2024 19:02:00 +0000</pubDate>
+      <dc:creator>Andy Jarrett</dc:creator>
+      <guid>https://andyjarrett.com/posts/2024/adding-local-storage-for-faster-development-to-the-alpinejs-rss-reader/</guid>
+      <enclosure url="https://andyjarrett.com/public/blogimage/nathalia-segato-auQGug8wkLM-unsplash.jpg" type="image/jpeg" />
+      <category>posts, javascript, alpinejs, rss, rss reader</category>
       <author>Andy Jarrett &lt;email@example.com&gt;</author>
     </item>
     <image>
